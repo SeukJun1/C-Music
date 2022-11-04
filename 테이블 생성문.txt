@@ -1,0 +1,19 @@
+create table ablum(
+Anum int not null primary key,
+Title varchar(30) not null,
+Atist varchar(30),
+Much int,
+Ddate date,
+Rat varchar(30),
+Star decimal(4,1))
+
+
+create table Music(
+Anum int not null,
+Disk1 int not null,
+Mnum int not null,
+Mname varchar(50),
+Disi varchar(10),
+primary key(Anum,Disk1,Mnum),
+ foreign key(Anum) References ablum(Anum)
+)
